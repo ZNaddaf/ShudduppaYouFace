@@ -11,8 +11,24 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Sets up the reservation list
-var reservations = [];
-var waitlist = [];
+var reservations = [
+    {
+        name: "Harrison",
+        phone: "2814603809",
+        email: "hthomas146@utexas.edu",
+        partySize: 69,
+        partyName: "Nice"
+    }
+];
+var waitlist = [
+    {
+        name: "Nerd",
+        phone: "5128675309",
+        email: "help@utexas.edu",
+        partySize: 420,
+        partyName: "Nice"
+    }
+];
 
 // Basic route that sends the user first to the AJAX page
 app.get("/", function (req, res) {
@@ -27,6 +43,15 @@ app.get("/reserve", function (req, res) {
 // Basic route that sends the user first to the tables page
 app.get("/tables", function (req, res) {
     res.sendFile(path.join(__dirname, "tables.html"));
+});
+
+// Displays all characters
+app.get("/api/tables", function (req, res) {
+    return res.json({
+        reservations: reservations,
+        waitlist: waitlist
+    });
+    //return res.json(waitlist);
 });
 
 
