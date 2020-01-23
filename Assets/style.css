@@ -1,0 +1,17 @@
+body {
+    background-color: olive;
+}
+
+main {
+    background-color: bisque ;
+    color: darkred ; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 {
+    font-family: cursive;
+}
+
+img {
+    width: 100%;
+}
+
