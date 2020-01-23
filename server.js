@@ -6,6 +6,13 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 4000;
 
+// Allows the app to serve static elements from the public directory
+app.use(express.static('Assets'))
+
+
+// Global variable
+var reservations = 0;
+
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -52,6 +59,24 @@ app.get("/api/tables", function (req, res) {
         waitlist: waitlist
     });
     //return res.json(waitlist);
+});
+
+
+// Create New Characters - takes in JSON input
+app.post("/api/tables", function (req, res) {
+    // req.body hosts is equal to the JSON post sent from the user
+    // This works because of our body parsing middleware
+    var reservationRequest = req.body;
+
+    if (reservations <= 5) {
+        reservations.push(reservationRequest);
+        console.log(reservations);
+    } else {
+        waitlist.push(reservationRequest)
+        console.log(waitlist);
+
+    }
+    res.json(reservationRequest);
 });
 
 
