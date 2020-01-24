@@ -1,6 +1,23 @@
 body {
     background-color: olive;
 }
+.jumbotron {
+    background-image: url(./Images/mae-mu-Pvclb-iHHYY-unsplash.jpg);
+    background-position-x: 15%;
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    color: whitesmoke;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    /* width: 25%; */
+    border: 0;
+    border-top: 1px solid whitesmoke;
+    margin: 1em 0;
+    padding: 0; }
 
 main {
     background-color: bisque ;

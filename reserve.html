@@ -16,46 +16,69 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Assets/style.css">
 </head>
 
 <body>
-    <div class="waitList">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-default">
-                    <div class="panel heading">
-                        <h4 class="panel-title"> Table Reservation</h4>
-                    </div>
-                    <div class="panel body">
-                        <form role="form">
-                            <div class="form-group">
-                                <label for>Name</label>
-                                <input type="text" class="form-control" id="reserve-name">
-                            </div>
-                            <div class="form-group">
-                                <label for>Phone Number</label>
-                                <input type="text" class="form-control" id="reserve-phone">
-                            </div>
-                            <div class="form-group">
-                                <label for>Email</label>
-                                <input type="text" class="form-control" id="reserve-email">
-                            </div>
-                            <div class="form-group">
-                                <label>Unique ID</label>
-                                <input type="text" class="form-control" id="reserve-id">
-                            </div>
-                            <button type="submit" class="btn btn-primary submit" id="reserve-btn">Submit</button>
 
-                        </form>
+    <!-- Main Body Container -->
+    <div class="container-fluid">
 
-                    </div>
-                </div>
+        <!-- Header with image -->
+        <div class="jumbotron text-center">
+            <div class="container col-sm-4">
+                <h1>ShudduppaYouFace</h1>
+                <hr align="center">
+                <h2>Make Your Reservation</h2>
+                <br>
+                <button id="reservation" class="btn btn-danger">Home</button>
+                <button id="tables" class="btn btn-warning">Available Tables</button>
             </div>
         </div>
 
+
+        <main>
+            <div class="content waitList">
+                <div class="row align-items-center">
+                    <div class="col-sm-12">
+                        <!-- Table Form goes here -->
+                        <div class="panel panel-default">
+                            <div class="panel heading">
+                                <h4 class="panel-title"> Table Reservation</h4>
+                            </div>
+                            <div class="panel body">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label for>Name</label>
+                                        <input type="text" class="form-control" id="reserve-name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for>Phone Number</label>
+                                        <input type="text" class="form-control" id="reserve-phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for>Email</label>
+                                        <input type="text" class="form-control" id="reserve-email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Unique ID</label>
+                                        <input type="text" class="form-control" id="reserve-id">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary submit">Submit</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
     </div>
 
-    </div>
+
+    </main>
     <script type="text/javascript">
         // Question: What does this code do?
         $("#reserve-btn").on("click", function (event) {
@@ -75,7 +98,6 @@
                 });
         });
     </script>
-
 </body>
 
 </html>
