@@ -54,7 +54,6 @@ app.get("/api/tables", function (req, res) {
     //return res.json(waitlist);
 });
 
-
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function () {
