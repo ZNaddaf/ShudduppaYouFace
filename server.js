@@ -60,3 +60,23 @@ app.get("/api/tables", function (req, res) {
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
+
+
+// reserve.html
+//==============================================================
+
+//Get reserve name
+app.get("/reserve", function (req, res) {
+    res.sendFile(path.join(__dirname, "reserve.html"));
+});
+//get reserve phone number
+//get reserve email
+//get reserve id
+
+//submit button
+$("button").click(function() {
+    $.get("/api/reserve").then(function(data){
+        alert ("Data: " + data);
+        console.log(data);
+    })
+})
